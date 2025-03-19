@@ -131,4 +131,204 @@
         }
 
         .academic-item h3 {
-            margin: 
+            margin: 0;
+            font-size: 32px; /* Increased text size */
+            color: #333;
+        }
+
+        .academic-item p {
+            margin: 10px 0; /* Increased margin */
+            font-size: 24px; /* Increased text size */
+            color: #555;
+        }
+
+        .academic-item .university {
+            font-size: 18px; /* Smaller font size for university */
+            font-style: italic; /* Italicized */
+            color: #777; /* Gray color for subtlety */
+        }
+
+        .academic-item .duration {
+            font-size: 20px; /* Increased text size */
+            color: #777;
+        }
+
+        .academic-item .sgpa {
+            font-size: 20px; /* Increased text size */
+            color: #0077b5;
+            font-weight: bold;
+        }
+
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 768px) {
+            /* Navigation Bar */
+            nav ul {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0; /* Add spacing between items */
+            }
+
+            /* Home Section */
+            .intro {
+                flex-direction: column; /* Stack text and image vertically */
+                text-align: center; /* Center-align text */
+            }
+
+            .intro-text {
+                padding-right: 0; /* Remove padding on mobile */
+                margin-bottom: 20px; /* Add spacing between text and image */
+            }
+
+            .intro-image {
+                text-align: center; /* Center-align image */
+            }
+
+            /* Academics Section */
+            .academic-item {
+                flex-direction: column; /* Stack logo and text vertically */
+                text-align: center; /* Center-align text */
+            }
+
+            .academic-item img {
+                margin-right: 0; /* Remove margin on mobile */
+                margin-bottom: 20px; /* Add spacing between logo and text */
+            }
+
+            /* Adjust font sizes for mobile */
+            .intro-text h1 {
+                font-size: 28px;
+            }
+
+            .intro-text p {
+                font-size: 18px;
+            }
+
+            #academics h2 {
+                font-size: 36px;
+            }
+
+            .academic-item h3 {
+                font-size: 24px;
+            }
+
+            .academic-item p {
+                font-size: 18px;
+            }
+
+            .academic-item .university {
+                font-size: 16px;
+            }
+
+            .academic-item .duration,
+            .academic-item .sgpa {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Horizontal Tabs -->
+    <nav>
+        <ul>
+            <li><a href="#home" class="tab-link">Home</a></li>
+            <li><a href="#academics" class="tab-link">Academics</a></li>
+            <li><a href="#project" class="tab-link">Project</a></li>
+            <li><a href="#extracurriculum" class="tab-link">Extracurriculum ▼</a></li>
+            <li><a href="#volunteering" class="tab-link">Volunteering</a></li>
+            <li><a href="#contact" class="tab-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="intro">
+            <div class="intro-text">
+                <h1>Hi, I'm Suhas Kshirsagar</h1>
+                <p>
+                    I’m pursuing an MBA in Finance from S B Patil Institute of Management. I’m passionate about finance—whether it’s analyzing markets, managing investments, or exploring the world of numbers, I find it thrilling to decode the financial world.  
+                </p>    
+                <p>    
+                    When I’m not diving into spreadsheets or financial models, you’ll find me chilling with my headphones on. 
+                </p>    
+                <p>    
+                    Music keeps me inspired and energized!  
+                </p>
+                <p>
+                    Feel free to connect with me on <a href="https://www.linkedin.com/in/suhasnk/" target="_blank">LinkedIn</a> to discuss finance, music, or anything in between!
+                </p>
+            </div>
+            <div class="intro-image">
+                <img src="suhass.jpg" alt="Suhas Kshirsagar">
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics">
+        <h2>Academics</h2>
+        <div class="academic-item">
+            <img src="logo sbpim.png" alt="S B Patil Institute of Management Logo">
+            <div>
+                <h3>MBA</h3>
+                <p>PCET's S B Patil Institute of Management, Nigdi-411044</p>
+                <p class="university">SAVITRIBAI PHULE PUNE UNIVERSITY</p>
+                <p class="duration">2024 - 2026</p>
+                <p class="sgpa">1st Sem SGPA: 8.38</p>
+            </div>
+        </div>
+        <div class="academic-item">
+            <img src="tcc-new-logo-png.png" alt="Tuljaram Chaturchand College Logo">
+            <div>
+                <h3>Bachelor of Commerce</h3>
+                <p>Tuljaram Chaturchand College, Baramati-413103</p>
+                <p class="university">SAVITRIBAI PHULE PUNE UNIVERSITY</p>
+                <p class="duration">2019 - 2022</p>
+            </div>
+        </div>
+        <div class="academic-item">
+            <img src="kpc logo.png" alt="KPC Jr. College Logo">
+            <div>
+                <h3>HSC</h3>
+                <p>KPC Jr. College of Commerce and Science, Kharghar-410210</p>
+                <p class="duration">2017 - 2019</p>
+            </div>
+        </div>
+        <div class="academic-item">
+            <img src="mudhoji.jpeg" alt="Mudhoji High School Logo">
+            <div>
+                <h3>SSC</h3>
+                <p>Mudhoji High School, Phaltan-415523</p>
+                <p class="duration">2017</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript to Show Only One Section at a Time -->
+    <script>
+        // Get all tab links and sections
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const sections = document.querySelectorAll('section');
+
+        // Add click event listeners to tab links
+        tabLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+
+                // Hide all sections
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                // Show the clicked section
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                if (targetSection) {
+                    targetSection.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
