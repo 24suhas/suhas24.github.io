@@ -159,6 +159,40 @@
             font-weight: bold;
         }
 
+        /* Contact Section */
+        #contact {
+            text-align: center; /* Center-align content */
+        }
+
+        #contact h2 {
+            font-size: 48px; /* Increased size for Contact heading */
+            margin-bottom: 40px; /* Added margin for spacing */
+            color: #333;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-item img {
+            width: 40px; /* Logo size */
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .contact-item a {
+            font-size: 24px; /* Increased text size */
+            color: #0077b5;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
         /* Media Queries for Mobile Devices */
         @media (max-width: 768px) {
             /* Navigation Bar */
@@ -225,6 +259,16 @@
             .academic-item .duration,
             .academic-item .sgpa {
                 font-size: 16px;
+            }
+
+            /* Contact Section */
+            .contact-item img {
+                width: 30px; /* Smaller logo size for mobile */
+                height: 30px;
+            }
+
+            .contact-item a {
+                font-size: 18px; /* Smaller text size for mobile */
             }
         }
     </style>
@@ -304,6 +348,37 @@
                 <p>Mudhoji High School, Phaltan-415523</p>
                 <p class="duration">2017</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="project">
+        <h2>Project</h2>
+        <p>Details about your projects will go here.</p>
+    </section>
+
+    <!-- Extracurriculum Section -->
+    <section id="extracurriculum">
+        <h2>Extracurriculum</h2>
+        <p>Details about your extracurricular activities will go here.</p>
+    </section>
+
+    <!-- Volunteering Section -->
+    <section id="volunteering">
+        <h2>Volunteering</h2>
+        <p>Details about your volunteering activities will go here.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-item">
+            <img src="gmail-logo.png" alt="Gmail Logo">
+            <a href="mailto:suhaskshirsagar242@gmail.com">suhaskshirsagar242@gmail.com</a>
+        </div>
+        <div class="contact-item">
+            <img src="linkedin-logo.png" alt="LinkedIn Logo">
+            <a href="https://www.linkedin.com/in/suhasnk/" target="_blank">linkedin.com/in/suhasnk</a>
         </div>
     </section>
 
