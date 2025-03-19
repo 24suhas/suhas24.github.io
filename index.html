@@ -43,13 +43,16 @@
             color: #ddd;
         }
 
-        /* Home Section */
-        #home {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        /* Sections */
+        section {
             padding: 50px;
             background-color: #fff;
+            display: none; /* Hidden by default */
+        }
+
+        /* Home Section */
+        #home {
+            display: block; /* Show Home section by default */
         }
 
         .intro {
@@ -96,18 +99,42 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        /* Academics Section */
+        .academic-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-left: 4px solid #0077b5;
+            background-color: #f9f9f9;
+        }
+
+        .academic-item h3 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .academic-item p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .academic-item .duration {
+            font-size: 14px;
+            color: #777;
+        }
     </style>
 </head>
 <body>
     <!-- Horizontal Tabs -->
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#academics">Academics</a></li>
-            <li><a href="#project">Project</a></li>
-            <li><a href="#extracurriculum">Extracurriculum ▼</a></li>
-            <li><a href="#volunteering">Volunteering</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="tab-link">Home</a></li>
+            <li><a href="#academics" class="tab-link">Academics</a></li>
+            <li><a href="#project" class="tab-link">Project</a></li>
+            <li><a href="#extracurriculum" class="tab-link">Extracurriculum ▼</a></li>
+            <li><a href="#volunteering" class="tab-link">Volunteering</a></li>
+            <li><a href="#contact" class="tab-link">Contact</a></li>
         </ul>
     </nav>
 
@@ -125,9 +152,55 @@
                 </p>
             </div>
             <div class="intro-image">
-                <img src= "suhass.jpg" alt="Suhas Kshirsagar">
+                <img src="suhass.jpg" alt="Suhas Kshirsagar">
             </div>
         </div>
     </section>
+
+    <!-- Academics Section -->
+    <section id="academics">
+        <h2>Academics</h2>
+        <div class="academic-item">
+            <h3>MBA</h3>
+            <p>S B Patil Institute of Management</p>
+            <p class="duration">2024 - 2026</p>
+	    <p class="First sem SGPA">1st Sem SGPA 8.38</p>
+        </div>
+        <div class="academic-item">
+            <h3>Bachelor of Commerce</h3>
+            <p>Tuljaram Chaturchand College, Baramati-413103</p>
+        </div>
+        <div class="academic-item">
+            <h3>HSC</h3>
+            <p>KPC Jr. College of Commerce and Science</p>
+        </div>
+        <div class="academic-item">
+            <h3>SSC</h3>
+            <p>Mudhoji High School, Phaltan-415523</p>
+        </div>
+    </section>
+
+    <!-- JavaScript to Show Only One Section at a Time -->
+    <script>
+        // Get all tab links and sections
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const sections = document.querySelectorAll('section');
+
+        // Add click event listeners to tab links
+        tabLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+
+                // Hide all sections
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                // Show the clicked section
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                targetSection.style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>
