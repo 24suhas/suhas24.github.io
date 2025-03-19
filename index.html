@@ -101,27 +101,49 @@
         }
 
         /* Academics Section */
+        #academics {
+            text-align: center; /* Center-align content */
+        }
+
         .academic-item {
             margin-bottom: 20px;
             padding: 20px;
             border-left: 4px solid #0077b5;
             background-color: #f9f9f9;
+            max-width: 800px; /* Limit width for better readability */
+            margin: 20px auto; /* Center the item */
+            display: flex;
+            align-items: center;
+        }
+
+        .academic-item img {
+            width: 80px; /* Logo size */
+            height: 80px;
+            margin-right: 20px;
+            border-radius: 10px;
         }
 
         .academic-item h3 {
             margin: 0;
-            font-size: 24px;
+            font-size: 28px; /* Increased text size */
             color: #333;
         }
 
         .academic-item p {
             margin: 5px 0;
+            font-size: 20px; /* Increased text size */
             color: #555;
         }
 
         .academic-item .duration {
-            font-size: 14px;
+            font-size: 16px; /* Increased text size */
             color: #777;
+        }
+
+        .academic-item .sgpa {
+            font-size: 16px; /* Increased text size */
+            color: #0077b5;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -161,22 +183,34 @@
     <section id="academics">
         <h2>Academics</h2>
         <div class="academic-item">
-            <h3>MBA</h3>
-            <p>S B Patil Institute of Management</p>
-            <p class="duration">2024 - 2026</p>
-	    <p class="First sem SGPA">1st Sem SGPA 8.38</p>
+            <img src="logo sbpim.png" alt="S B Patil Institute of Management Logo">
+            <div>
+                <h3>MBA</h3>
+                <p>S B Patil Institute of Management</p>
+                <p class="duration">2024 - 2026</p>
+                <p class="sgpa">1st Sem SGPA: 8.38</p>
+            </div>
         </div>
         <div class="academic-item">
-            <h3>Bachelor of Commerce</h3>
-            <p>Tuljaram Chaturchand College, Baramati-413103</p>
+            <img src="tcc-new-logo-png.png" alt="Tuljaram Chaturchand College Logo">
+            <div>
+                <h3>Bachelor of Commerce</h3>
+                <p>Tuljaram Chaturchand College, Baramati-413103</p>
+            </div>
         </div>
         <div class="academic-item">
-            <h3>HSC</h3>
-            <p>KPC Jr. College of Commerce and Science</p>
+            <img src="kpc logo.png" alt="KPC Jr. College Logo">
+            <div>
+                <h3>HSC</h3>
+                <p>KPC Jr. College of Commerce and Science</p>
+            </div>
         </div>
         <div class="academic-item">
-            <h3>SSC</h3>
-            <p>Mudhoji High School, Phaltan-415523</p>
+            <img src="mudhoji.jpeg" alt="Mudhoji High School Logo">
+            <div>
+                <h3>SSC</h3>
+                <p>Mudhoji High School, Phaltan-415523</p>
+            </div>
         </div>
     </section>
 
