@@ -5,25 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suhas Kshirsagar - MBA in Finance</title>
     <style>
-    /* Background Colors for Sections */
-    #home {
-        background-color: #FFD700; /* Gold Accent 4 */
-    }
-    #academics {
-        background-color: #E3F2FD; /* Light Blue */
-    }
-    #project {
-        background-color: #DFFFD6; /* Light Green */
-    }
-    #extracurriculum {
-        background-color: #FFE5B4; /* Light Orange */
-    }
-    #volunteering {
-        background-color: #E6E6FA; /* Light Purple */
-    }
-    #contact {
-        background-color: #F5F5F5; /* Light Gray */
-    }
+        /* Background Colors for Sections */
+        #home {
+            background-color: #FFD700; /* Gold Accent 4 */
+        }
+        #academics {
+            background-color: #E3F2FD; /* Light Blue */
+        }
+        #project {
+            background-color: #DFFFD6; /* Light Green */
+        }
+        #extracurriculum {
+            background-color: #FFE5B4; /* Light Orange */
+        }
+        #volunteering {
+            background-color: #E6E6FA; /* Light Purple */
+        }
+        #contact {
+            background-color: #F5F5F5; /* Light Gray */
+        }
+
         /* General Styles */
         body {
             font-family: 'Times New Roman', Times, serif;
@@ -177,7 +178,54 @@
             color: #0077b5;
             font-weight: bold;
         }
-/* Contact Section */
+
+        /* Project Section */
+        #project {
+            text-align: center; /* Center-align content */
+        }
+
+        #project h2 {
+            font-size: 48px; /* Increased size for Project heading */
+            margin-bottom: 40px; /* Added margin for spacing */
+            color: #333;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: space-between; /* Space out the two boxes */
+            gap: 20px; /* Add gap between boxes */
+            max-width: 1200px; /* Limit width for better readability */
+            margin: 0 auto; /* Center the container */
+        }
+
+        .project-box {
+            flex: 1; /* Equal width for both boxes */
+            padding: 25px;
+            border: 2px solid #0077b5; /* Border for the box */
+            border-radius: 10px; /* Rounded corners */
+            background-color: #f9f9f9; /* Light background color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+            text-align: left; /* Align text to the left */
+        }
+
+        .project-box h3 {
+            margin: 0;
+            font-size: 32px; /* Increased text size */
+            color: #333;
+        }
+
+        .project-box p {
+            margin: 10px 0; /* Increased margin */
+            font-size: 24px; /* Increased text size */
+            color: #555;
+        }
+
+        .project-box .tools {
+            font-size: 18px; /* Smaller font size for tools */
+            color: #777;
+        }
+
+        /* Contact Section */
         #contact {
             text-align: center; /* Center-align content */
         }
@@ -209,56 +257,6 @@
 
         .contact-item a:hover {
             text-decoration: underline;
-        }
-
-        /* Media Queries for Mobile Devices */
-        @media (max-width: 768px) {
-            /* Navigation Bar */
-            nav ul {
-                flex-direction: column; /* Stack items vertically */
-                align-items: center;
-            }
-
-            nav ul li {
-                margin: 10px 0; /* Add spacing between items */
-            }
-
-        /* Project Section */
-        #project {
-            text-align: center; /* Center-align content */
-        }
-
-        #project h2 {
-            font-size: 48px; /* Increased size for Project heading */
-            margin-bottom: 40px; /* Added margin for spacing */
-            color: #333;
-        }
-
-        .project-item {
-            margin-bottom: 20px;
-            padding: 25px;
-            border-left: 4px solid #0077b5;
-            background-color: #f9f9f9;
-            max-width: 800px; /* Limit width for better readability */
-            margin: 20px auto; /* Center the item */
-            text-align: left; /* Align text to the left */
-        }
-
-        .project-item h3 {
-            margin: 0;
-            font-size: 32px; /* Increased text size */
-            color: #333;
-        }
-
-        .project-item p {
-            margin: 10px 0; /* Increased margin */
-            font-size: 24px; /* Increased text size */
-            color: #555;
-        }
-
-        .project-item .tools {
-            font-size: 18px; /* Smaller font size for tools */
-            color: #777;
         }
 
         /* Media Queries for Mobile Devices */
@@ -330,16 +328,25 @@
             }
 
             /* Project Section */
-            .project-item h3 {
-                font-size: 24px;
+            .project-container {
+                flex-direction: column; /* Stack boxes vertically on mobile */
             }
 
-            .project-item p {
-                font-size: 18px;
+            .project-box {
+                width: 100%; /* Full width for mobile */
+                margin-bottom: 20px; /* Add spacing between boxes */
             }
 
-            .project-item .tools {
-                font-size: 16px;
+            .project-box h3 {
+                font-size: 24px; /* Adjust font size for mobile */
+            }
+
+            .project-box p {
+                font-size: 18px; /* Adjust font size for mobile */
+            }
+
+            .project-box .tools {
+                font-size: 16px; /* Adjust font size for mobile */
             }
         }
     </style>
@@ -425,17 +432,22 @@
     <!-- Project Section -->
     <section id="project">
         <h2>Project</h2>
-        <div class="project-item">
-            <h3>Field Research Project</h3>
-            <p><strong>Title:</strong> A Study of Investment and Retirement Planning in Teaching Professionals</p>
-            <p><strong>Description:</strong> Collected data from 100 respondents and prepared a detailed report on investment and retirement planning trends among teaching professionals.</p>
-        </div>
-        <div class="project-item">
-            <h3>Desk Research Project</h3>
-            <p><strong>Industry:</strong> Financial Services</p>
-            <p><strong>Company:</strong> Nippon Life Asset Management Company Ltd.</p>
-            <p><strong>Description:</strong> Conducted secondary research using data from Prowess, Screener, and Moneycontrol to analyze the financial performance and market trends of the company.</p>
-            <p class="tools"><strong>Tools Used:</strong> Prowess, Screener, Moneycontrol</p>
+        <div class="project-container">
+            <!-- Field Research Project -->
+            <div class="project-box">
+                <h3>Field Research Project</h3>
+                <p><strong>Title:</strong> A Study of Investment and Retirement Planning in Teaching Professionals</p>
+                <p><strong>Description:</strong> Collected data from 100 respondents and prepared a detailed report on investment and retirement planning trends among teaching professionals.</p>
+            </div>
+
+            <!-- Desk Research Project -->
+            <div class="project-box">
+                <h3>Desk Research Project</h3>
+                <p><strong>Industry:</strong> Financial Services</p>
+                <p><strong>Company:</strong> Nippon Life Asset Management Company Ltd.</p>
+                <p><strong>Description:</strong> Conducted secondary research using data from Prowess, Screener, and Moneycontrol to analyze the financial performance and market trends of the company.</p>
+                <p class="tools"><strong>Tools Used:</strong> Prowess, Screener, Moneycontrol</p>
+            </div>
         </div>
     </section>
 
