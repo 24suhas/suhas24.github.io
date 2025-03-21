@@ -7,7 +7,7 @@
     <style>
         /* Background Colors for Sections */
         #home {
-            background-color: #E6E6FA; /* Light Purple */
+            background-color: #FFD700; /* Gold Accent 4 */
         }
         #academics {
             background-color: #E3F2FD; /* Light Blue */
@@ -227,28 +227,81 @@
 
         /* Photos Section */
         .photos-section {
-            margin-top: 40px; /* Add spacing above the photos section */
-            text-align: center; /* Center-align the heading and photos */
+            margin-top: 20px; /* Add spacing above the photos section */
+            text-align: left; /* Align the heading and photos to the left */
         }
 
-        .photos-section h3 {
-            font-size: 32px; /* Heading size */
-            margin-bottom: 20px; /* Spacing below the heading */
+        .photos-section h3.left-heading {
+            font-size: 28px; /* Heading size */
+            margin-bottom: 15px; /* Spacing below the heading */
             color: #333;
+            text-align: left; /* Align heading to the left */
         }
 
         .photos-container {
             display: flex;
-            justify-content: center; /* Center-align photos horizontally */
-            gap: 20px; /* Add spacing between photos */
             flex-wrap: wrap; /* Allow photos to wrap on smaller screens */
+            gap: 15px; /* Add spacing between photos */
         }
 
         .photos-container img {
-            width: 200px; /* Set a fixed width for the photos */
+            width: 45%; /* Set a fixed width for the photos */
             height: auto; /* Maintain aspect ratio */
             border-radius: 10px; /* Rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        }
+
+        /* Extracurriculum Section */
+        #extracurriculum {
+            text-align: center; /* Center-align content */
+        }
+
+        #extracurriculum h2 {
+            font-size: 48px; /* Increased size for Extracurriculum heading */
+            margin-bottom: 40px; /* Added margin for spacing */
+            color: #333;
+        }
+
+        .diwali-mandi {
+            max-width: 1200px; /* Limit width for better readability */
+            margin: 0 auto; /* Center the container */
+            text-align: left; /* Align text to the left */
+        }
+
+        .diwali-mandi h3 {
+            font-size: 36px; /* Heading size */
+            margin-bottom: 20px; /* Spacing below the heading */
+            color: #333;
+        }
+
+        .diwali-mandi p {
+            font-size: 24px; /* Increased text size */
+            line-height: 1.6; /* Improved readability */
+            color: #555;
+        }
+
+        .diwali-mandi .highlight {
+            font-weight: bold; /* Highlight key points */
+            color: #0077b5;
+        }
+
+        .diwali-mandi .photos-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow photos to wrap on smaller screens */
+            gap: 20px; /* Add spacing between photos */
+            margin-top: 30px; /* Add spacing above the photos */
+        }
+
+        .diwali-mandi .photos-container img {
+            width: 200px; /* Set a fixed width for the photos */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 20px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+            transform: rotate(-5deg); /* Rotate photos for a creative look */
+        }
+
+        .diwali-mandi .photos-container img:nth-child(even) {
+            transform: rotate(5deg); /* Alternate rotation for even photos */
         }
 
         /* Contact Section */
@@ -377,7 +430,13 @@
 
             /* Photos Section */
             .photos-container img {
-                width: 45%; /* Make photos smaller on mobile */
+                width: 100%; /* Make photos full width on mobile */
+            }
+
+            /* Extracurriculum Section */
+            .diwali-mandi .photos-container img {
+                width: 100%; /* Make photos full width on mobile */
+                transform: rotate(0); /* Remove rotation on mobile */
             }
         }
     </style>
@@ -465,14 +524,25 @@
         <h2>Project</h2>
         <div class="project-container">
             <!-- Field Research Project -->
-            <div class="project-box">
+            <div class="project-box left">
                 <h3>Field Research Project</h3>
                 <p><strong>Title:</strong> A Study of Investment and Retirement Planning in Teaching Professionals</p>
                 <p><strong>Description:</strong> Collected data from 100 respondents and prepared a detailed report on investment and retirement planning trends among teaching professionals.</p>
+
+                <!-- Photos Section Below Field Research Project -->
+                <div class="photos-section">
+                    <h3 class="left-heading">Few Respondents</h3>
+                    <div class="photos-container">
+                        <img src="photo1.jpg" alt="Respondent 1">
+                        <img src="photo2.jpg" alt="Respondent 2">
+                        <img src="photo3.jpg" alt="Respondent 3">
+                        <img src="photo4.jpg" alt="Respondent 4">
+                    </div>
+                </div>
             </div>
 
             <!-- Desk Research Project -->
-            <div class="project-box">
+            <div class="project-box right">
                 <h3>Desk Research Project</h3>
                 <p><strong>Industry:</strong> Financial Services</p>
                 <p><strong>Company:</strong> Nippon Life Asset Management Company Ltd.</p>
@@ -480,23 +550,36 @@
                 <p class="tools"><strong>Tools Used:</strong> Prowess, Screener, Moneycontrol</p>
             </div>
         </div>
-
-        <!-- Photos Section Below Field Research Project -->
-        <div class="photos-section">
-            <h3>Few Respondents</h3>
-            <div class="photos-container">
-                <img src="82.jpg" alt="Respondent 1">
-                <img src="21.jpg" alt="Respondent 2">
-                <img src="49.jpg" alt="Respondent 3">
-                <img src="77.jpg" alt="Respondent 4">
-            </div>
-        </div>
     </section>
 
     <!-- Extracurriculum Section -->
     <section id="extracurriculum">
         <h2>Extracurriculum</h2>
-        <p>Details about your extracurricular activities will go here.</p>
+        <div class="diwali-mandi">
+            <h3>Diwali Mandi: A Festival of Entrepreneurship and Fun!</h3>
+            <p>
+                At SB Patil Institute of Management, the Diwali Mandi fest was more than just a celebration—it was a hands-on experience in entrepreneurship, teamwork, and creativity. The event encouraged students to start small stalls and generate profits, testing their business acumen in a real-world scenario.
+            </p>
+            <p>
+                <span class="highlight">Our Stall: BlinGo</span><br>
+                A team of 17 enthusiastic members came together to set up Blingo, a stall that blended entertainment with festive delights. Our stall featured:
+            </p>
+            <ul>
+                <li>🎯 A Fun Game – Designed to engage and excite visitors while adding an interactive element to our stall.</li>
+                <li>🍹 Mango Lassi – A refreshing and delicious drink that was an instant hit.</li>
+                <li>🍕 Toast Pizza – A quick, cheesy treat loved by all.</li>
+                <li>🕯 Eco-Friendly Diwali Candles – Beautiful scented candles made with sustainable materials.</li>
+                <li>🪔 Colorful Diyas – Hand-decorated diyas that added festive charm to every home.</li>
+            </ul>
+
+            <!-- Photos Section -->
+            <div class="photos-container">
+                <img src="diwali1.jpg" alt="Diwali Mandi Photo 1">
+                <img src="diwali2.jpg" alt="Diwali Mandi Photo 2">
+                <img src="diwali3.jpg" alt="Diwali Mandi Photo 3">
+                <img src="diwali4.jpg" alt="Diwali Mandi Photo 4">
+            </div>
+        </div>
     </section>
 
     <!-- Volunteering Section -->
