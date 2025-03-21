@@ -7,7 +7,7 @@
     <style>
         /* Background Colors for Sections */
         #home {
-            background-color: #FFD700; /* Gold Accent 4 */
+            background-color: #E6E6FA; /* Light Purple */
         }
         #academics {
             background-color: #E3F2FD; /* Light Blue */
@@ -225,32 +225,6 @@
             color: #777;
         }
 
-        /* Photos Section */
-        .photos-section {
-            margin-top: 20px; /* Add spacing above the photos section */
-            text-align: left; /* Align the heading and photos to the left */
-        }
-
-        .photos-section h3.left-heading {
-            font-size: 28px; /* Heading size */
-            margin-bottom: 15px; /* Spacing below the heading */
-            color: #333;
-            text-align: left; /* Align heading to the left */
-        }
-
-        .photos-container {
-            display: flex;
-            flex-wrap: wrap; /* Allow photos to wrap on smaller screens */
-            gap: 15px; /* Add spacing between photos */
-        }
-
-        .photos-container img {
-            width: 45%; /* Set a fixed width for the photos */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-        }
-
         /* Extracurriculum Section */
         #extracurriculum {
             text-align: center; /* Center-align content */
@@ -290,6 +264,7 @@
             flex-wrap: wrap; /* Allow photos to wrap on smaller screens */
             gap: 20px; /* Add spacing between photos */
             margin-top: 30px; /* Add spacing above the photos */
+            justify-content: center; /* Center-align photos */
         }
 
         .diwali-mandi .photos-container img {
@@ -297,11 +272,26 @@
             height: auto; /* Maintain aspect ratio */
             border-radius: 20px; /* Rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-            transform: rotate(-5deg); /* Rotate photos for a creative look */
         }
 
-        .diwali-mandi .photos-container img:nth-child(even) {
-            transform: rotate(5deg); /* Alternate rotation for even photos */
+        .diwali-mandi .group-photo {
+            width: 100%; /* Full width for group photos */
+            display: flex;
+            justify-content: center; /* Center-align group photos */
+            margin-top: 30px; /* Add spacing above the group photos */
+        }
+
+        .diwali-mandi .group-photo img {
+            width: 300px; /* Set a fixed width for group photos */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 20px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        }
+
+        .diwali-mandi .group-photo.side-by-side {
+            display: flex;
+            gap: 20px; /* Add spacing between side-by-side photos */
+            justify-content: center; /* Center-align photos */
         }
 
         /* Contact Section */
@@ -428,15 +418,17 @@
                 font-size: 16px; /* Adjust font size for mobile */
             }
 
-            /* Photos Section */
-            .photos-container img {
-                width: 100%; /* Make photos full width on mobile */
-            }
-
             /* Extracurriculum Section */
             .diwali-mandi .photos-container img {
                 width: 100%; /* Make photos full width on mobile */
-                transform: rotate(0); /* Remove rotation on mobile */
+            }
+
+            .diwali-mandi .group-photo img {
+                width: 100%; /* Make group photos full width on mobile */
+            }
+
+            .diwali-mandi .group-photo.side-by-side {
+                flex-direction: column; /* Stack side-by-side photos vertically on mobile */
             }
         }
     </style>
@@ -561,7 +553,7 @@
                 At SB Patil Institute of Management, the Diwali Mandi fest was more than just a celebration—it was a hands-on experience in entrepreneurship, teamwork, and creativity. The event encouraged students to start small stalls and generate profits, testing their business acumen in a real-world scenario.
             </p>
             <p>
-                <span class="highlight">Our Stall: BlinGo</span><br>
+                <span class="highlight">Our Stall: BLINGO</span><br>
                 A team of 17 enthusiastic members came together to set up Blingo, a stall that blended entertainment with festive delights. Our stall featured:
             </p>
             <ul>
@@ -574,10 +566,21 @@
 
             <!-- Photos Section -->
             <div class="photos-container">
-                <img src="diwali1.jpg" alt="Diwali Mandi Photo 1">
-                <img src="diwali2.jpg" alt="Diwali Mandi Photo 2">
-                <img src="diwali3.jpg" alt="Diwali Mandi Photo 3">
-                <img src="diwali4.jpg" alt="Diwali Mandi Photo 4">
+                <img src="cand.png" alt="Diwali Mandi Photo 1">
+                <img src="cent.png" alt="Diwali Mandi Photo 2">
+                <img src="lassi.png" alt="Diwali Mandi Photo 3">
+                <img src="piza.png" alt="Diwali Mandi Photo 4">
+            </div>
+
+            <!-- Group Photo -->
+            <div class="group-photo">
+                <img src="WhatsApp Image 2024-10-17 at 9.03.52 PM.jpeg" alt="Group Photo 1">
+            </div>
+
+            <!-- Side-by-Side Group Photos -->
+            <div class="group-photo side-by-side">
+                <img src="diwali mandi.jpeg" alt="Group Photo 2">
+                <img src="WhatsApp Image 2024-10-17 at 9.03.57 PM.jpeg" alt="Group Photo 3">
             </div>
         </div>
     </section>
