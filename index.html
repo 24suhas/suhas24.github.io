@@ -227,25 +227,25 @@
 
         /* Photos Section */
         .photos-section {
-            margin-top: 40px; /* Add spacing above the photos section */
-            text-align: center; /* Center-align the heading and photos */
+            margin-top: 20px; /* Add spacing above the photos section */
+            text-align: left; /* Align the heading and photos to the left */
         }
 
-        .photos-section h3 {
-            font-size: 32px; /* Heading size */
-            margin-bottom: 20px; /* Spacing below the heading */
+        .photos-section h3.left-heading {
+            font-size: 28px; /* Heading size */
+            margin-bottom: 15px; /* Spacing below the heading */
             color: #333;
+            text-align: left; /* Align heading to the left */
         }
 
         .photos-container {
             display: flex;
-            justify-content: center; /* Center-align photos horizontally */
-            gap: 20px; /* Add spacing between photos */
             flex-wrap: wrap; /* Allow photos to wrap on smaller screens */
+            gap: 15px; /* Add spacing between photos */
         }
 
         .photos-container img {
-            width: 200px; /* Set a fixed width for the photos */
+            width: 45%; /* Set a fixed width for the photos */
             height: auto; /* Maintain aspect ratio */
             border-radius: 10px; /* Rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
@@ -377,7 +377,7 @@
 
             /* Photos Section */
             .photos-container img {
-                width: 45%; /* Make photos smaller on mobile */
+                width: 100%; /* Make photos full width on mobile */
             }
         }
     </style>
@@ -465,30 +465,30 @@
         <h2>Project</h2>
         <div class="project-container">
             <!-- Field Research Project -->
-            <div class="project-box">
+            <div class="project-box left">
                 <h3>Field Research Project</h3>
                 <p><strong>Title:</strong> A Study of Investment and Retirement Planning in Teaching Professionals</p>
                 <p><strong>Description:</strong> Collected data from 100 respondents and prepared a detailed report on investment and retirement planning trends among teaching professionals.</p>
+
+                <!-- Photos Section Below Field Research Project -->
+                <div class="photos-section">
+                    <h3 class="left-heading">Few Respondents</h3>
+                    <div class="photos-container">
+                        <img src="82.jpg" alt="Respondent 1">
+                        <img src="53.jpg" alt="Respondent 2">
+                        <img src="49.jpg" alt="Respondent 3">
+                        <img src="26.jpg" alt="Respondent 4">
+                    </div>
+                </div>
             </div>
 
             <!-- Desk Research Project -->
-            <div class="project-box">
+            <div class="project-box right">
                 <h3>Desk Research Project</h3>
                 <p><strong>Industry:</strong> Financial Services</p>
                 <p><strong>Company:</strong> Nippon Life Asset Management Company Ltd.</p>
                 <p><strong>Description:</strong> Conducted secondary research using data from Prowess, Screener, and Moneycontrol to analyze the financial performance and market trends of the company.</p>
                 <p class="tools"><strong>Tools Used:</strong> Prowess, Screener, Moneycontrol</p>
-            </div>
-        </div>
-
-        <!-- Photos Section Below Field Research Project -->
-        <div class="photos-section">
-            <h3>Few Respondents</h3>
-            <div class="photos-container">
-                <img src="82.jpg" alt="Respondent 1">
-                <img src="53.jpg" alt="Respondent 2">
-                <img src="49.jpg" alt="Respondent 3">
-                <img src="26.jpg" alt="Respondent 4">
             </div>
         </div>
     </section>
