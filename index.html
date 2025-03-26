@@ -236,72 +236,173 @@
             color: #333;
         }
 
-        .diwali-mandi {
-            max-width: 1200px; /* Limit width for better readability */
-            margin: 0 auto; /* Center the container */
-            text-align: left; /* Align text to the left */
+        .extracurriculum-header {
+            cursor: pointer;
+            padding: 20px;
+            background-color: #FFE5B4;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
         }
 
-        .diwali-mandi h3 {
-            font-size: 36px; /* Heading size */
-            margin-bottom: 20px; /* Spacing below the heading */
+        .extracurriculum-header:hover {
+            background-color: #FFD699;
+        }
+
+        .extracurriculum-header h3 {
+            margin: 0;
+            font-size: 36px;
             color: #333;
         }
 
+        .extracurriculum-header .click-more {
+            font-size: 18px;
+            color: #777;
+            font-style: italic;
+        }
+
+        .extracurriculum-content {
+            display: none;
+            padding-top: 20px;
+        }
+
+        /* Industrial Visit specific styles */
+        .industrial-visit {
+            background-color: #f0f8ff; /* Light blue background similar to Tata Motors logo */
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .industrial-visit h3 {
+            font-size: 36px;
+            color: #006BB6; /* Tata Motors blue color */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .industrial-visit p {
+            font-size: 24px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .industrial-visit .highlight {
+            font-weight: bold;
+            color: #006BB6;
+        }
+
+        .industrial-visit .photos-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+            justify-content: center;
+        }
+
+        .industrial-visit .photos-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .industrial-visit .main-photo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .industrial-visit .main-photo img {
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .industrial-visit .side-by-side {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Diwali Mandi specific styles */
+        .diwali-mandi {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 30px;
+            background-color: #FFF9E6;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .diwali-mandi h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
         .diwali-mandi p {
-            font-size: 24px; /* Increased text size */
-            line-height: 1.6; /* Improved readability */
+            font-size: 24px;
+            line-height: 1.6;
             color: #555;
         }
 
         .diwali-mandi .highlight {
-            font-weight: bold; /* Highlight key points */
+            font-weight: bold;
             color: #0077b5;
         }
 
         .diwali-mandi .photos-container {
             display: flex;
-            flex-wrap: wrap; /* Allow photos to wrap on smaller screens */
-            gap: 20px; /* Add spacing between photos */
-            margin-top: 30px; /* Add spacing above the photos */
-            justify-content: center; /* Center-align photos */
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+            justify-content: center;
         }
 
         .diwali-mandi .photos-container img {
-            width: 200px; /* Set a fixed width for the photos */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 20px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+            width: 200px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .diwali-mandi .group-photo {
-            width: 100%; /* Full width for group photos */
+            width: 100%;
             display: flex;
-            justify-content: center; /* Center-align group photos */
-            margin-top: 30px; /* Add spacing above the group photos */
+            justify-content: center;
+            margin-top: 30px;
         }
 
         .diwali-mandi .group-photo img {
-            width: 300px; /* Set a fixed width for group photos */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 20px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+            width: 300px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .diwali-mandi .group-photo.side-by-side {
             display: flex;
-            gap: 20px; /* Add spacing between side-by-side photos */
-            justify-content: center; /* Center-align photos */
+            gap: 20px;
+            justify-content: center;
         }
 
         /* Contact Section */
         #contact {
-            text-align: center; /* Center-align content */
+            text-align: center;
         }
 
         #contact h2 {
-            font-size: 48px; /* Increased size for Contact heading */
-            margin-bottom: 40px; /* Added margin for spacing */
+            font-size: 48px;
+            margin-bottom: 40px;
             color: #333;
         }
 
@@ -313,13 +414,13 @@
         }
 
         .contact-item img {
-            width: 40px; /* Logo size */
+            width: 40px;
             height: 40px;
             margin-right: 15px;
         }
 
         .contact-item a {
-            font-size: 24px; /* Increased text size */
+            font-size: 24px;
             color: #0077b5;
             text-decoration: none;
         }
@@ -332,38 +433,38 @@
         @media (max-width: 768px) {
             /* Navigation Bar */
             nav ul {
-                flex-direction: column; /* Stack items vertically */
+                flex-direction: column;
                 align-items: center;
             }
 
             nav ul li {
-                margin: 10px 0; /* Add spacing between items */
+                margin: 10px 0;
             }
 
             /* Home Section */
             .intro {
-                flex-direction: column; /* Stack text and image vertically */
-                text-align: center; /* Center-align text */
+                flex-direction: column;
+                text-align: center;
             }
 
             .intro-text {
-                padding-right: 0; /* Remove padding on mobile */
-                margin-bottom: 20px; /* Add spacing between text and image */
+                padding-right: 0;
+                margin-bottom: 20px;
             }
 
             .intro-image {
-                text-align: center; /* Center-align image */
+                text-align: center;
             }
 
             /* Academics Section */
             .academic-item {
-                flex-direction: column; /* Stack logo and text vertically */
-                text-align: center; /* Center-align text */
+                flex-direction: column;
+                text-align: center;
             }
 
             .academic-item img {
-                margin-right: 0; /* Remove margin on mobile */
-                margin-bottom: 20px; /* Add spacing between logo and text */
+                margin-right: 0;
+                margin-bottom: 20px;
             }
 
             /* Adjust font sizes for mobile */
@@ -398,37 +499,68 @@
 
             /* Project Section */
             .project-container {
-                flex-direction: column; /* Stack boxes vertically on mobile */
+                flex-direction: column;
             }
 
             .project-box {
-                width: 100%; /* Full width for mobile */
-                margin-bottom: 20px; /* Add spacing between boxes */
+                width: 100%;
+                margin-bottom: 20px;
             }
 
             .project-box h3 {
-                font-size: 24px; /* Adjust font size for mobile */
+                font-size: 24px;
             }
 
             .project-box p {
-                font-size: 18px; /* Adjust font size for mobile */
+                font-size: 18px;
             }
 
             .project-box .tools {
-                font-size: 16px; /* Adjust font size for mobile */
+                font-size: 16px;
             }
 
             /* Extracurriculum Section */
+            .extracurriculum-header h3 {
+                font-size: 28px;
+            }
+
+            .extracurriculum-header .click-more {
+                font-size: 16px;
+            }
+
+            /* Industrial Visit mobile styles */
+            .industrial-visit h3 {
+                font-size: 28px;
+            }
+
+            .industrial-visit p {
+                font-size: 18px;
+            }
+
+            .industrial-visit .main-photo img {
+                width: 100%;
+            }
+
+            .industrial-visit .side-by-side {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .industrial-visit .photos-container img {
+                width: 100%;
+            }
+
+            /* Diwali Mandi mobile styles */
             .diwali-mandi .photos-container img {
-                width: 100%; /* Make photos full width on mobile */
+                width: 100%;
             }
 
             .diwali-mandi .group-photo img {
-                width: 100%; /* Make group photos full width on mobile */
+                width: 100%;
             }
 
             .diwali-mandi .group-photo.side-by-side {
-                flex-direction: column; /* Stack side-by-side photos vertically on mobile */
+                flex-direction: column;
             }
         }
     </style>
@@ -452,10 +584,10 @@
             <div class="intro-text">
                 <h1>Hi, I'm Suhas Kshirsagar</h1>
                 <p>
-                    I’m pursuing an MBA in Finance from S B Patil Institute of Management. I’m passionate about finance—whether it’s analyzing markets, managing investments, or exploring the world of numbers, I find it thrilling to decode the financial world.  
+                    I'm pursuing an MBA in Finance from S B Patil Institute of Management. I'm passionate about finance—whether it's analyzing markets, managing investments, or exploring the world of numbers, I find it thrilling to decode the financial world.  
                 </p>    
                 <p>    
-                    When I’m not diving into spreadsheets or financial models, you’ll find me chilling with my headphones on. 
+                    When I'm not diving into spreadsheets or financial models, you'll find me chilling with my headphones on. 
                 </p>    
                 <p>    
                     Music keeps me inspired and energized!  
@@ -536,40 +668,84 @@
     <!-- Extracurriculum Section -->
     <section id="extracurriculum">
         <h2>Extracurriculum</h2>
-        <div class="diwali-mandi">
+        
+        <!-- Industrial Visit Header -->
+        <div class="extracurriculum-header" onclick="toggleIndustrialVisit()">
+            <h3>Industrial Visit to Tata Motors</h3>
+            <p class="click-more">Click to watch more ▼</p>
+        </div>
+        
+        <!-- Industrial Visit Content -->
+        <div class="extracurriculum-content" id="industrialVisitContent">
+            <div class="industrial-visit">
+                <h3>Industrial Visit to Tata Motors – A Learning Experience</h3>
+                
+                <div class="main-photo">
+                    <img src="final.jpg" alt="Tata Motors Plant">
+                </div>
+                
+                <p>
+                    As part of our MBA journey at S.B. Patil Institute of Management, we had the incredible opportunity to visit the Tata Motors Passenger Vehicle Plant. Witnessing the production of Safari and Harrier up close gave us valuable insights into the automotive industry's technology, processes, and management strategies.
+                </p>
+                
+                <div class="side-by-side">
+                    <img src="WhatsApp Image 2025-03-26 at 22.29.34_df4fb375.jpg" alt="Tata Motors Visit Photo 1">
+                    <img src="WhatsApp Image 2025-03-26 at 22.29.37_d5159f11.jpg" alt="Tata Motors Visit Photo 2">
+                     <img src="WhatsApp Image 2025-03-26 at 23.03.00_4b9d16e5.jpg" alt="Tata Motors Visit Photo 2">
+                </div>
+                
+                <p>
+                    One of the most inspiring moments was seeing the dedication of women on the assembly line, highlighting the power of diversity in the industry. This visit truly bridged the gap between classroom learning and real-world applications.
+                </p>
+                
+                <p class="highlight">
+                    A big thank you to Tata Motors for this eye-opening experience!
+                </p>
+            </div>
+        </div>
+        
+        <!-- Diwali Mandi Header -->
+        <div class="extracurriculum-header" onclick="toggleDiwaliMandi()">
             <h3>Diwali Mandi: A Festival of Entrepreneurship and Fun!</h3>
-            <p>
-                At SB Patil Institute of Management, the Diwali Mandi fest was more than just a celebration—it was a hands-on experience in entrepreneurship, teamwork, and creativity. The event encouraged students to start small stalls and generate profits, testing their business acumen in a real-world scenario.
-            </p>
-            <p>
-                <span class="highlight">Our Stall: BlinGo</span><br>
-                A team of 17 enthusiastic members came together to set up Blingo, a stall that blended entertainment with festive delights. Our stall featured:
-            </p>
-            <ul>
-                <li>🎯 A Fun Game – Designed to engage and excite visitors while adding an interactive element to our stall.</li>
-                <li>🍹 Mango Lassi – A refreshing and delicious drink that was an instant hit.</li>
-                <li>🍕 Toast Pizza – A quick, cheesy treat loved by all.</li>
-                <li>🕯 Eco-Friendly Diwali Candles – Beautiful scented candles made with sustainable materials.</li>
-                <li>🪔 Colorful Diyas – Hand-decorated diyas that added festive charm to every home.</li>
-            </ul>
+            <p class="click-more">Click to watch more ▼</p>
+        </div>
+        
+        <!-- Diwali Mandi Content -->
+        <div class="extracurriculum-content" id="diwaliMandiContent">
+            <div class="diwali-mandi">
+                <p>
+                    At SB Patil Institute of Management, the Diwali Mandi fest was more than just a celebration—it was a hands-on experience in entrepreneurship, teamwork, and creativity. The event encouraged students to start small stalls and generate profits, testing their business acumen in a real-world scenario.
+                </p>
+                <p>
+                    <span class="highlight">Our Stall: BlinGo</span><br>
+                    A team of 17 enthusiastic members came together to set up Blingo, a stall that blended entertainment with festive delights. Our stall featured:
+                </p>
+                <ul>
+                    <li>🎯 A Fun Game – Designed to engage and excite visitors while adding an interactive element to our stall.</li>
+                    <li>🍹 Mango Lassi – A refreshing and delicious drink that was an instant hit.</li>
+                    <li>🍕 Toast Pizza – A quick, cheesy treat loved by all.</li>
+                    <li>🕯 Eco-Friendly Diwali Candles – Beautiful scented candles made with sustainable materials.</li>
+                    <li>🪔 Colorful Diyas – Hand-decorated diyas that added festive charm to every home.</li>
+                </ul>
 
-            <!-- Photos Section -->
-            <div class="photos-container">
-                <img src="cand.png" alt="Diwali Mandi Photo 1">
-                <img src="cent.png" alt="Diwali Mandi Photo 2">
-                <img src="lassi.png" alt="Diwali Mandi Photo 3">
-                <img src="piza.png" alt="Diwali Mandi Photo 4">
-            </div>
+                <!-- Photos Section -->
+                <div class="photos-container">
+                    <img src="cand.png" alt="Diwali Mandi Photo 1">
+                    <img src="cent.png" alt="Diwali Mandi Photo 2">
+                    <img src="lassi.png" alt="Diwali Mandi Photo 3">
+                    <img src="piza.png" alt="Diwali Mandi Photo 4">
+                </div>
 
-            <!-- Group Photo -->
-            <div class="group-photo">
-                <img src="WhatsApp Image 2024-10-17 at 9.03.52 PM.jpeg" alt="Group Photo 1">
-            </div>
+                <!-- Group Photo -->
+                <div class="group-photo">
+                    <img src="WhatsApp Image 2024-10-17 at 9.03.52 PM.jpeg" alt="Group Photo 1">
+                </div>
 
-            <!-- Side-by-Side Group Photos -->
-            <div class="group-photo side-by-side">
-                <img src="diwali mandi.jpeg" alt="Group Photo 2">
-                <img src="WhatsApp Image 2024-10-17 at 9.03.57 PM.jpeg" alt="Group Photo 3">
+                <!-- Side-by-Side Group Photos -->
+                <div class="group-photo side-by-side">
+                    <img src="diwali mandi.jpeg" alt="Group Photo 2">
+                    <img src="WhatsApp Image 2024-10-17 at 9.03.57 PM.jpeg" alt="Group Photo 3">
+                </div>
             </div>
         </div>
     </section>
@@ -616,6 +792,40 @@
                 }
             });
         });
+
+        // Function to toggle Industrial Visit content
+        function toggleIndustrialVisit() {
+            const content = document.getElementById('industrialVisitContent');
+            const header = document.querySelectorAll('.extracurriculum-header')[0].querySelector('.click-more');
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                header.textContent = 'Click to watch more ▼';
+            } else {
+                content.style.display = 'block';
+                header.textContent = 'Click to hide ▲';
+                // Close other sections if open
+                document.getElementById('diwaliMandiContent').style.display = 'none';
+                document.querySelectorAll('.extracurriculum-header')[1].querySelector('.click-more').textContent = 'Click to watch more ▼';
+            }
+        }
+
+        // Function to toggle Diwali Mandi content
+        function toggleDiwaliMandi() {
+            const content = document.getElementById('diwaliMandiContent');
+            const header = document.querySelectorAll('.extracurriculum-header')[1].querySelector('.click-more');
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                header.textContent = 'Click to watch more ▼';
+            } else {
+                content.style.display = 'block';
+                header.textContent = 'Click to hide ▲';
+                // Close other sections if open
+                document.getElementById('industrialVisitContent').style.display = 'none';
+                document.querySelectorAll('.extracurriculum-header')[0].querySelector('.click-more').textContent = 'Click to watch more ▼';
+            }
+        }
     </script>
 </body>
 </html>
