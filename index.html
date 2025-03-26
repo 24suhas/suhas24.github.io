@@ -273,6 +273,19 @@
             border-radius: 10px;
             margin-bottom: 40px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 4px solid #006BB6; /* Tata Motors blue border */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .industrial-visit::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #006BB6, #00AEEF, #006BB6);
         }
 
         .industrial-visit h3 {
@@ -304,10 +317,11 @@
         }
 
         .industrial-visit .photos-container img {
-            width: 300px;
+            max-width: 45%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #006BB6;
         }
 
         .industrial-visit .main-photo {
@@ -318,17 +332,41 @@
         }
 
         .industrial-visit .main-photo img {
-            width: 500px;
+            max-width: 80%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid #006BB6;
         }
 
         .industrial-visit .side-by-side {
             display: flex;
+            flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
             width: 100%;
+            margin: 20px 0;
+        }
+
+        .industrial-visit .side-by-side img {
+            max-width: 45%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #006BB6;
+        }
+
+        .industrial-visit .final-photo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .industrial-visit .final-photo img {
+            max-width: 60%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #006BB6;
         }
 
         /* Diwali Mandi specific styles */
@@ -539,6 +577,7 @@
 
             .industrial-visit .main-photo img {
                 width: 100%;
+                max-width: 100%;
             }
 
             .industrial-visit .side-by-side {
@@ -546,8 +585,17 @@
                 align-items: center;
             }
 
+            .industrial-visit .side-by-side img {
+                max-width: 100%;
+                margin-bottom: 15px;
+            }
+
             .industrial-visit .photos-container img {
-                width: 100%;
+                max-width: 100%;
+            }
+
+            .industrial-visit .final-photo img {
+                max-width: 100%;
             }
 
             /* Diwali Mandi mobile styles */
@@ -689,9 +737,8 @@
                 </p>
                 
                 <div class="side-by-side">
-                    <img src="WhatsApp Image 2025-03-26 at 22.29.34_df4fb375.jpg" alt="Tata Motors Visit Photo 1">
-                    <img src="WhatsApp Image 2025-03-26 at 22.29.37_d5159f11.jpg" alt="Tata Motors Visit Photo 2">
-                     <img src="WhatsApp Image 2025-03-26 at 23.03.00_4b9d16e5.jpg" alt="Tata Motors Visit Photo 2">
+                    <img src="WhatsApp Image 2025-03-26 at 22.29.37_d5159f11.jpg" alt="Tata Motors Visit Photo 1">
+                    <img src="WhatsApp Image 2025-03-26 at 23.03.00_4b9d16e5.jpg" alt="Tata Motors Visit Photo 2">
                 </div>
                 
                 <p>
@@ -701,6 +748,10 @@
                 <p class="highlight">
                     A big thank you to Tata Motors for this eye-opening experience!
                 </p>
+                
+                <div class="final-photo">
+                    <img src="WhatsApp Image 2025-03-26 at 22.29.34_df4fb375.jpg" alt="Group Photo at Tata Motors">
+                </div>
             </div>
         </div>
         
