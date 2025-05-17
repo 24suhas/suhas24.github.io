@@ -18,9 +18,6 @@
         #extracurriculum {
             background-color: #FFE5B4; /* Light Orange */
         }
-        #volunteering {
-            background-color: #E6E6FA; /* Light Purple */
-        }
         #contact {
             background-color: #F5F5F5; /* Light Gray */
         }
@@ -433,6 +430,58 @@
             justify-content: center;
         }
 
+        /* Corporate Excellence specific styles */
+        .corporate-excellence {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 30px;
+            background-color: #F0FFF0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #228B22;
+        }
+
+        .corporate-excellence h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #228B22;
+            text-align: center;
+        }
+
+        .corporate-excellence p {
+            font-size: 24px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .corporate-excellence .highlight {
+            font-weight: bold;
+            color: #228B22;
+        }
+
+        .corporate-excellence ul {
+            font-size: 24px;
+            line-height: 1.6;
+            color: #555;
+            padding-left: 40px;
+        }
+
+        .corporate-excellence .certificate {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .corporate-excellence .certificate img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #228B22;
+        }
+
         /* Contact Section */
         #contact {
             text-align: center;
@@ -610,6 +659,20 @@
             .diwali-mandi .group-photo.side-by-side {
                 flex-direction: column;
             }
+
+            /* Corporate Excellence mobile styles */
+            .corporate-excellence h3 {
+                font-size: 28px;
+            }
+
+            .corporate-excellence p,
+            .corporate-excellence ul {
+                font-size: 18px;
+            }
+
+            .corporate-excellence .certificate img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -621,7 +684,6 @@
             <li><a href="#academics" class="tab-link">Academics</a></li>
             <li><a href="#project" class="tab-link">Project</a></li>
             <li><a href="#extracurriculum" class="tab-link">Extracurriculum ▼</a></li>
-            <li><a href="#volunteering" class="tab-link">Volunteering</a></li>
             <li><a href="#contact" class="tab-link">Contact</a></li>
         </ul>
     </nav>
@@ -717,6 +779,38 @@
     <section id="extracurriculum">
         <h2>Extracurriculum</h2>
         
+        <!-- Corporate Excellence Header -->
+        <div class="extracurriculum-header" onclick="toggleCorporateExcellence()">
+            <h3>Part-time Volunteer at Corporate Excellence</h3>
+            <p class="click-more">Click to watch more ▼</p>
+        </div>
+        
+        <!-- Corporate Excellence Content -->
+        <div class="extracurriculum-content" id="corporateExcellenceContent">
+            <div class="corporate-excellence">
+                <h3>Part-time Volunteer at Corporate Excellence</h3>
+                
+                <p>
+                    During my time as a part-time volunteer at Corporate Excellence, I had the opportunity to develop and demonstrate several key skills in event management and team coordination:
+                </p>
+                
+                <ul>
+                    <li><strong>Team management and supervision:</strong> Led a team of volunteers to ensure smooth execution of events and activities.</li>
+                    <li><strong>Task allocation and tracking progress:</strong> Effectively assigned responsibilities and monitored completion of tasks.</li>
+                    <li><strong>Setting up props and managing setup logistics:</strong> Coordinated the physical setup of events including props, equipment, and venue arrangements.</li>
+                    <li><strong>Ensuring timely responsibilities:</strong> Maintained schedules and deadlines to ensure all aspects of events ran on time.</li>
+                </ul>
+                
+                <p class="highlight">
+                    This experience helped me develop practical leadership and organizational skills in a professional setting.
+                </p>
+                
+                <div class="certificate">
+                    <img src="Suhas Kshirsagar-14thNov2024.png" alt="Corporate Excellence Certificate">
+                </div>
+            </div>
+        </div>
+        
         <!-- Industrial Visit Header -->
         <div class="extracurriculum-header" onclick="toggleIndustrialVisit()">
             <h3>Industrial Visit to Tata Motors</h3>
@@ -801,12 +895,6 @@
         </div>
     </section>
 
-    <!-- Volunteering Section -->
-    <section id="volunteering">
-        <h2>Volunteering</h2>
-        <p>Details about your volunteering activities will go here.</p>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
@@ -844,9 +932,9 @@
             });
         });
 
-        // Function to toggle Industrial Visit content
-        function toggleIndustrialVisit() {
-            const content = document.getElementById('industrialVisitContent');
+        // Function to toggle Corporate Excellence content
+        function toggleCorporateExcellence() {
+            const content = document.getElementById('corporateExcellenceContent');
             const header = document.querySelectorAll('.extracurriculum-header')[0].querySelector('.click-more');
             
             if (content.style.display === 'block') {
@@ -856,14 +944,16 @@
                 content.style.display = 'block';
                 header.textContent = 'Click to hide ▲';
                 // Close other sections if open
+                document.getElementById('industrialVisitContent').style.display = 'none';
                 document.getElementById('diwaliMandiContent').style.display = 'none';
                 document.querySelectorAll('.extracurriculum-header')[1].querySelector('.click-more').textContent = 'Click to watch more ▼';
+                document.querySelectorAll('.extracurriculum-header')[2].querySelector('.click-more').textContent = 'Click to watch more ▼';
             }
         }
 
-        // Function to toggle Diwali Mandi content
-        function toggleDiwaliMandi() {
-            const content = document.getElementById('diwaliMandiContent');
+        // Function to toggle Industrial Visit content
+        function toggleIndustrialVisit() {
+            const content = document.getElementById('industrialVisitContent');
             const header = document.querySelectorAll('.extracurriculum-header')[1].querySelector('.click-more');
             
             if (content.style.display === 'block') {
@@ -873,8 +963,29 @@
                 content.style.display = 'block';
                 header.textContent = 'Click to hide ▲';
                 // Close other sections if open
+                document.getElementById('corporateExcellenceContent').style.display = 'none';
+                document.getElementById('diwaliMandiContent').style.display = 'none';
+                document.querySelectorAll('.extracurriculum-header')[0].querySelector('.click-more').textContent = 'Click to watch more ▼';
+                document.querySelectorAll('.extracurriculum-header')[2].querySelector('.click-more').textContent = 'Click to watch more ▼';
+            }
+        }
+
+        // Function to toggle Diwali Mandi content
+        function toggleDiwaliMandi() {
+            const content = document.getElementById('diwaliMandiContent');
+            const header = document.querySelectorAll('.extracurriculum-header')[2].querySelector('.click-more');
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                header.textContent = 'Click to watch more ▼';
+            } else {
+                content.style.display = 'block';
+                header.textContent = 'Click to hide ▲';
+                // Close other sections if open
+                document.getElementById('corporateExcellenceContent').style.display = 'none';
                 document.getElementById('industrialVisitContent').style.display = 'none';
                 document.querySelectorAll('.extracurriculum-header')[0].querySelector('.click-more').textContent = 'Click to watch more ▼';
+                document.querySelectorAll('.extracurriculum-header')[1].querySelector('.click-more').textContent = 'Click to watch more ▼';
             }
         }
     </script>
