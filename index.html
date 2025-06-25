@@ -9,6 +9,9 @@
         #home {
             background-color: #E6E6FA; /* Light Purple */
         }
+        #experience {
+            background-color: #FFF0F5; /* Light Pink */
+        }
         #academics {
             background-color: #E3F2FD; /* Light Blue */
         }
@@ -115,6 +118,68 @@
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Experience Section */
+        #experience {
+            text-align: center;
+        }
+
+        #experience h2 {
+            font-size: 48px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .experience-item {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #FFF0F5;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .experience-item h3 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .experience-item .company {
+            font-size: 24px;
+            color: #555;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .experience-item .duration {
+            font-size: 20px;
+            color: #777;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .experience-item .description {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .experience-item .skills {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .experience-item .skills span {
+            display: inline-block;
+            background-color: #FFC0CB;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-bottom: 10px;
         }
 
         /* Academics Section */
@@ -543,6 +608,31 @@
                 text-align: center;
             }
 
+            /* Experience Section */
+            .experience-item {
+                padding: 20px;
+            }
+
+            .experience-item h3 {
+                font-size: 24px;
+            }
+
+            .experience-item .company {
+                font-size: 20px;
+            }
+
+            .experience-item .duration {
+                font-size: 16px;
+            }
+
+            .experience-item .description {
+                font-size: 18px;
+            }
+
+            .experience-item .skills {
+                font-size: 16px;
+            }
+
             /* Academics Section */
             .academic-item {
                 flex-direction: column;
@@ -681,6 +771,7 @@
     <nav>
         <ul>
             <li><a href="#home" class="tab-link">Home</a></li>
+            <li><a href="#experience" class="tab-link">Experience</a></li>
             <li><a href="#academics" class="tab-link">Academics</a></li>
             <li><a href="#project" class="tab-link">Project</a></li>
             <li><a href="#extracurriculum" class="tab-link">Extracurriculum ▼</a></li>
@@ -708,6 +799,35 @@
             </div>
             <div class="intro-image">
                 <img src="suhass.jpg" alt="Suhas Kshirsagar">
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        
+        <div class="experience-item">
+            <h3>Financial Analyst Intern</h3>
+            <div class="company">ABC Financial Services</div>
+            <div class="duration">June 2023 - August 2023</div>
+            <div class="description">
+                <p>During my internship at ABC Financial Services, I gained hands-on experience in financial analysis and reporting. My responsibilities included:</p>
+                <ul>
+                    <li>Assisted in preparing financial reports and presentations for senior management</li>
+                    <li>Conducted market research and competitor analysis to identify investment opportunities</li>
+                    <li>Analyzed financial statements and performed ratio analysis to assess company performance</li>
+                    <li>Created financial models to forecast revenue and expenses</li>
+                    <li>Participated in client meetings and prepared investment proposals</li>
+                </ul>
+                <p>This experience helped me develop strong analytical skills and a deeper understanding of financial markets.</p>
+            </div>
+            <div class="skills">
+                <span>Financial Analysis</span>
+                <span>Financial Modeling</span>
+                <span>Excel</span>
+                <span>Market Research</span>
+                <span>Investment Analysis</span>
             </div>
         </div>
     </section>
@@ -969,25 +1089,7 @@
                 document.querySelectorAll('.extracurriculum-header')[2].querySelector('.click-more').textContent = 'Click to watch more ▼';
             }
         }
-
-        // Function to toggle Diwali Mandi content
-        function toggleDiwaliMandi() {
-            const content = document.getElementById('diwaliMandiContent');
-            const header = document.querySelectorAll('.extracurriculum-header')[2].querySelector('.click-more');
-            
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-                header.textContent = 'Click to watch more ▼';
-            } else {
-                content.style.display = 'block';
-                header.textContent = 'Click to hide ▲';
-                // Close other sections if open
-                document.getElementById('corporateExcellenceContent').style.display = 'none';
-                document.getElementById('industrialVisitContent').style.display = 'none';
-                document.querySelectorAll('.extracurriculum-header')[0].querySelector('.click-more').textContent = 'Click to watch more ▼';
-                document.querySelectorAll('.extracurriculum-header')[1].querySelector('.click-more').textContent = 'Click to watch more ▼';
-            }
-        }
     </script>
 </body>
 </html>
+           
