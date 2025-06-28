@@ -1089,6 +1089,25 @@
                 document.querySelectorAll('.extracurriculum-header')[2].querySelector('.click-more').textContent = 'Click to watch more ▼';
             }
         }
+
+            // Function to toggle Diwali Mandi content
+    function toggleDiwaliMandi() {
+        const content = document.getElementById('diwaliMandiContent');
+        const header = document.querySelectorAll('.extracurriculum-header')[2].querySelector('.click-more');
+        
+        if (content.style.display === 'block') {
+            content.style.display = 'none';
+            header.textContent = 'Click to watch more ▼';
+        } else {
+            content.style.display = 'block';
+            header.textContent = 'Click to hide ▲';
+            // Close other sections if open
+            document.getElementById('corporateExcellenceContent').style.display = 'none';
+            document.getElementById('industrialVisitContent').style.display = 'none';
+            document.querySelectorAll('.extracurriculum-header')[0].querySelector('.click-more').textContent = 'Click to watch more ▼';
+            document.querySelectorAll('.extracurriculum-header')[1].querySelector('.click-more').textContent = 'Click to watch more ▼';
+        }
+    }
     </script>
 </body>
 </html>
