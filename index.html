@@ -10,7 +10,7 @@
             background-color: #E6E6FA; /* Light Purple */
         }
         #experience {
-            background-color: #FFF0F5; /* Light Pink */
+            background-color: #FFFFFF; /* White */
         }
         #academics {
             background-color: #E3F2FD; /* Light Blue */
@@ -131,33 +131,65 @@
             color: #333;
         }
 
-        .experience-item {
-            max-width: 800px;
+        .experience-container {
+            display: flex;
+            max-width: 1200px;
             margin: 0 auto;
+            gap: 30px;
+        }
+
+        .experience-details {
+            flex: 1;
+            text-align: left;
+        }
+
+        .experience-photo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .experience-photo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-item {
             padding: 30px;
-            background-color: #FFF0F5;
+            background-color: #4B0082; /* Indigo */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
             margin-bottom: 30px;
+            border: 4px solid #8A2BE2; /* Violet border */
+            color: white;
+        }
+
+        .company-logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
         }
 
         .experience-item h3 {
             font-size: 32px;
-            color: #333;
+            color: white;
             margin-bottom: 15px;
         }
 
         .experience-item .company {
             font-size: 24px;
-            color: #555;
+            color: #FFD700; /* Gold */
             margin-bottom: 15px;
             font-weight: bold;
         }
 
         .experience-item .duration {
             font-size: 20px;
-            color: #777;
+            color: #ccc;
             margin-bottom: 20px;
             font-style: italic;
         }
@@ -165,7 +197,7 @@
         .experience-item .description {
             font-size: 22px;
             line-height: 1.6;
-            color: #555;
+            color: white;
         }
 
         .experience-item .skills {
@@ -175,11 +207,12 @@
 
         .experience-item .skills span {
             display: inline-block;
-            background-color: #FFC0CB;
-            padding: 5px 10px;
+            background-color: #8A2BE2; /* Violet */
+            padding: 8px 15px;
             border-radius: 5px;
             margin-right: 10px;
             margin-bottom: 10px;
+            color: white;
         }
 
         /* Academics Section */
@@ -609,6 +642,10 @@
             }
 
             /* Experience Section */
+            .experience-container {
+                flex-direction: column;
+            }
+
             .experience-item {
                 padding: 20px;
             }
@@ -807,15 +844,25 @@
     <section id="experience">
         <h2>Experience</h2>
         
-        <div class="experience-item">
-            <h3>Intern</h3>
-            <div class="company">Motilal Oswal Financial Services Ltd</div>
-            <div class="duration">June 2025 - Aug 2025</div>
+        <div class="experience-container">
+            <div class="experience-details">
+                <div class="experience-item">
+                    <img src="Screenshot 2025-07-18 121749.png" alt="Motilal Oswal Logo" class="company-logo">
+                    <h3>Intern</h3>
+                    <div class="company">Motilal Oswal Financial Services Ltd</div>
+                    <div class="duration">June 2025 - Aug 2025</div>
+                    <div class="description">
+                        Gained valuable experience in financial services, wealth management, and stock market operations.
+                    </div>
+                    <div class="skills">
+                        <span>Communication</span>
+                        <span>Stock market</span>
+                        <span>Wealth management services</span>
+                    </div>
+                </div>
             </div>
-            <div class="skills">
-                <span>Communication</span>
-                <span>Stock market</span>
-                <span>Wealth management services</span>
+            <div class="experience-photo">
+                <img src="mofsl.jpg" alt="Suhas at Motilal Oswal">
             </div>
         </div>
     </section>
@@ -1064,7 +1111,6 @@
         function toggleIndustrialVisit() {
             const content = document.getElementById('industrialVisitContent');
             const header = document.querySelectorAll('.extracurriculum-header')[1].querySelector('.click-more');
-            
             if (content.style.display === 'block') {
                 content.style.display = 'none';
                 header.textContent = 'Click to watch more ▼';
@@ -1079,25 +1125,48 @@
             }
         }
 
-            // Function to toggle Diwali Mandi content
-    function toggleDiwaliMandi() {
-        const content = document.getElementById('diwaliMandiContent');
-        const header = document.querySelectorAll('.extracurriculum-header')[2].querySelector('.click-more');
-        
-        if (content.style.display === 'block') {
-            content.style.display = 'none';
-            header.textContent = 'Click to watch more ▼';
-        } else {
-            content.style.display = 'block';
-            header.textContent = 'Click to hide ▲';
-            // Close other sections if open
-            document.getElementById('corporateExcellenceContent').style.display = 'none';
-            document.getElementById('industrialVisitContent').style.display = 'none';
-            document.querySelectorAll('.extracurriculum-header')[0].querySelector('.click-more').textContent = 'Click to watch more ▼';
-            document.querySelectorAll('.extracurriculum-header')[1].querySelector('.click-more').textContent = 'Click to watch more ▼';
+        // Function to toggle Diwali Mandi content
+        function toggleDiwaliMandi() {
+            const content = document.getElementById('diwaliMandiContent');
+            const header = document.querySelectorAll('.extracurriculum-header')[2].querySelector('.click-more');
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                header.textContent = 'Click to watch more ▼';
+            } else {
+                content.style.display = 'block';
+                header.textContent = 'Click to hide ▲';
+                // Close other sections if open
+                document.getElementById('corporateExcellenceContent').style.display = 'none';
+                document.getElementById('industrialVisitContent').style.display = 'none';
+                document.querySelectorAll('.extracurriculum-header')[0].querySelector('.click-more').textContent = 'Click to watch more ▼';
+                document.querySelectorAll('.extracurriculum-header')[1].querySelector('.click-more').textContent = 'Click to watch more ▼';
+            }
         }
-    }
+
+        // Highlight current tab based on visible section
+        function highlightCurrentTab() {
+            const visibleSection = document.querySelector('section[style="display: block;"]') || document.getElementById('home');
+            const sectionId = visibleSection.id;
+            
+            tabLinks.forEach(link => {
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.style.fontWeight = 'bold';
+                    link.style.color = '#FFD700'; // Gold color for active tab
+                } else {
+                    link.style.fontWeight = 'normal';
+                    link.style.color = 'white';
+                }
+            });
+        }
+
+        // Call highlightCurrentTab when a section is shown
+        tabLinks.forEach(link => {
+            link.addEventListener('click', highlightCurrentTab);
+        });
+
+        // Initialize by highlighting the home tab
+        highlightCurrentTab();
     </script>
 </body>
 </html>
-           
